@@ -51,7 +51,22 @@ const pinkPrice = .55
 
 // CODE HERE
 
+//Declaring `totalAcres` varialble and setting it's value to 0.
+let totalAcres = 0;
 
+//Iterating over the acres of each apple variety to calculate how many acres of each were picked daily. Adding up values to the `totalAcres`.
+for (let i = 0; i < fujiAcres.length; i++) {
+    totalAcres += fujiAcres[i];
+}
+for (let i = 0; i < galaAcres.length; i++) {
+    totalAcres += galaAcres[i];
+}
+for (let i = 0; i < pinkAcres.length; i++) {
+    totalAcres += pinkAcres[i];
+}
+
+//Printing out the result.
+console.log(totalAcres);
 
 
 
@@ -69,7 +84,11 @@ const pinkPrice = .55
 
 // CODE HERE
 
+//Calculating the average number of acres picked per day by dividing total into 7 days in a week. (Also can be done by dividing `totalAcres` by the array.length method). 
+let averageDailyAcres = totalAcres / 7;
 
+//Printing out the result.
+console.log(averageDailyAcres);
 
 
 
@@ -107,6 +126,14 @@ let days = 0
 
 // CODE HERE
 
+//Creating a while loop that's going to repeat until `acresLeft` reaches 0. During each cycle it checks the condition first and if `acresLeft` still greater than 0 `acresLeft` decrements by `averageDailyAcres` and `days` increments by 1.
+while (acresLeft > 0) {
+    acresLeft -= averageDailyAcres;
+    days ++;
+}
+
+//Loging `days` to the console.
+console.log(days);
 
 
 // PROBLEM 4
@@ -139,8 +166,26 @@ let days = 0
 // let galaTons =
 // let pinkTons =
 
+//Making empty arrays that will store the daily amounts of apples picked in tons.
+let fujiTons = [];
+let galaTons = [];
+let pinkTons = [];
 
+//Iterating over each of the original arrays to calculate the daily amounts picked in tons and storing the value into the new arrays.
+for (let i = 0; i < fujiAcres.length; i ++) {
+    fujiTons.push(fujiAcres[i] * 6.5);
+}
+for (let i = 0; i < galaAcres.length; i ++) {
+    galaTons.push(galaAcres[i] * 6.5);
+}
+for (let i = 0; i < pinkAcres.length; i ++) {
+    pinkTons.push(pinkAcres[i] * 6.5);
+}
 
+//Loging each of the new arrays to the console.
+console.log(fujiTons);
+console.log(galaTons);
+console.log(pinkTons);
 
 
 
@@ -166,8 +211,26 @@ let days = 0
 // let galaPounds =
 // let pinkPounds =
 
+//Declaring varialbles that are going to store total in pouns for each variety of apples and setting value to 0.
+let fujiPounds = 0;
+let galaPounds = 0;
+let pinkPounds = 0;
 
+//Iterating over the arrays to calculate the total number in tons picked per variety and convert it into pounds.
+for (let i = 0; i < fujiTons.length; i++) {
+    fujiPounds += 2000 * fujiTons[i];
+}
+for (let i = 0; i < galaTons.length; i++) {
+    galaPounds += 2000 * galaTons[i];
+}
+for (let i = 0; i < pinkTons.length; i++) {
+    pinkPounds += 2000 * pinkTons[i];
+}
 
+//Loging the result to the console.
+console.log(fujiPounds);
+console.log(galaPounds);
+console.log(pinkPounds);
 
 
 
@@ -193,8 +256,15 @@ let days = 0
 // let galaProfit =
 // let pinkProfit =
 
+//Calculating how much you'll make from selling each type of apple.
+let fujiProfit = fujiPounds * fujiPrice;
+let galaProfit = galaPounds * galaPrice;
+let pinkProfit = pinkPounds * pinkPrice;
 
-
+//Loging each profit to the console.
+console.log(fujiProfit);
+console.log(galaProfit);
+console.log(pinkProfit);
 
 
 
@@ -209,3 +279,9 @@ let days = 0
 */
 
 // CODE HERE
+
+//Declaring variable `totalProfit` and adding up all the profits to calculate the result.
+let totalProfit = fujiProfit + galaProfit + pinkProfit;
+
+//Loging `totalProfit` to the console.
+console.log(totalProfit);

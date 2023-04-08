@@ -10,6 +10,7 @@
 */
 
 //CODE HERE
+const gitDefinition = "Git is a version control software that helps to keep track of the changes that has been made to the code as well as helps groups of developers to collaborate on the same code."
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -18,6 +19,7 @@
 */
 
 //CODE HERE
+const gitHubDefinition = "Github is a web software platform where git repositories can be remotely stored."
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -26,6 +28,7 @@
 */
 
 //CODE HERE
+const gitInitDefinition = "Git init command initializes a new git repository."
 
 //////////////////PROBLEM 4////////////////////
 /*
@@ -34,6 +37,7 @@
 */
 
 //CODE HERE
+const gitCloneDefinition = "Git clone command creates a copy of the remote repository allowing you to run code on your local machine."
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -42,6 +46,7 @@
 */
 
 //CODE HERE
+const gitStatusDefinition = "Git status shows what is being tracked by git, which changes are staged to be committed and which not."
 
 //////////////////PROBLEM 6////////////////////
 /*
@@ -53,6 +58,9 @@
 */
 
 //CODE HERE
+const gitAddDefinition = "Git add adds chosen changes to the staging area where they are ready to be committed."
+
+const gitAddCode = "git add ."
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -64,7 +72,9 @@
 */
 
 //CODE HERE
+const gitCommitDefinition = "Git commit takes a snapshot of the current state of working directory."
 
+const gitCommitCode = 'git commit -m "initial commit"'
 
 //////////////////PROBLEM 8////////////////////
 /*
@@ -73,3 +83,4 @@
 */
 
 //CODE HERE
+const gitPushDefinition = "Git push uploads local repository content to a remote repository."
